@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 300px;
+            height: 400px;
+        }
+
+        .div1 {
+            float: left;
+            border: 1px solid greenyellow;
+        }
+
+        .div2 {
+            float: left;
+            border: 1px solid red;
+        }
+
+        .div2 {
+            float: left;
+            border: 1px solid pink;
+        }
+
+        p {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1" id="div1">
+        <p id="p1" draggable="true">拖拖1拖拖</p>
+        <p id="p2" draggable="true">拖拖2拖拖</p>
+    </div>
+    <div class="div2" id="div2"></div>
+    <div class="div3" id="div3"></div>
+    <script>
+        document.ondragstart = function (e) {
+            //通过dataTransfer存储的数据只能在drop事件中获取
+            e.dataTransfer.setData("text/html",e.target.id);
+        }
+        document.ondragend = function (e) {
+        }
+        document.ondragleave = function (e) {
+        }
+        document.ondrag = function (e) {
+            e.target.parentNode.style.borderWidth="5px";
+        }
+
+        document.ondragenter = function (e) {
+        }
+        document.ondragover = function (e) {
+            e.preventDefault();
+        }
+        document.ondrop = function (e) {
+            var id=e.dataTransfer.getData("text/html");
+            e.target.appendChild(document.getElementById(id));
+        }
+        document.ondragleave = function (e) {
+        }
+        //var p = document.querySelector("#pe");
+        //var div = document.querySelector("#div2");
+        //应用于拖拽元素
+        //ondragstart 开始拖拽
+        //ondragend 拖拽结束
+        //ondragleave 光标离开拖拽元素区域
+        //ondrag 拖拽时
+        // p.ondragstart=function(){
+        //     console.log("ondragstart");
+        // }
+        // p.ondragend=function(){
+        //     console.log("ondragend");
+        // }
+        // p.ondragleave=function(){
+        //     console.log("ondragleave");
+        // }
+        // p.ondrag=function(){
+        //     console.log("ondrag");
+        // }
+
+        //应用于目标元素
+        //ondragenter 拖拽元素进入目标元素
+        //ondragover 停留目标元素上
+        //ondrop 在目标元素上松开鼠标时
+        //ondragleave 离开目标元素
+        // div.ondragenter=function(){
+        //     console.log("ondragenter");
+        // }
+        // div.ondragover=function(e){
+        //     console.log("ondragover");
+        //     //在ondragover阻止浏览器默认行为
+        //     e.preventDefault();
+        // }
+        // //浏览器默认阻止ondrop事件
+        // div.ondrop=function(){
+        //     console.log("ondrop");
+        //     div2.appendChild(p);
+        // }
+        // div.ondragleave=function(){
+        //     console.log("目标ondragleave");
+        // }
+    </script>
+</body>
+
+</html>

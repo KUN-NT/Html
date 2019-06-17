@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+        }
+        /* 没有内容，空格都没有 */
+        div:empty{
+            border:5px solid blueviolet; 
+        }
+        /* 获取到锚点 */
+        h2:target{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <a href="#1">1</a>
+    <a href="#2">2</a>
+    <a href="#3">3</a>
+    <h2 id="1">测试1</h2>
+    <h2 id="2">测试2</h2>
+    <h2 id="3">测试3</h2>
+</body>
+</html>

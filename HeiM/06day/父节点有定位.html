@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 子绝父相：子绝对定位 父相对定位 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .yeye {
+            width: 800px;
+            height: 800px;
+            background-color: yellow;
+            overflow: hidden;
+            margin: 100px;
+            /*爷爷节点有定位根据爷爷节点定位*/
+            position: absolute;
+        }
+
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            margin: 200px;
+            /*父节点有定位根据父节点定位*/
+            /* position:absolute; */
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yeye">
+        <div class="father">
+            <div class="son"></div>
+        </div>
+    </div>
+</body>
+
+</html>

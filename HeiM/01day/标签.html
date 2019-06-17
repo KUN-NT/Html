@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <base target="_blank" /> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>HTML基础</h1>
+    <div>
+        <h2>目录</h2>
+        <a href="#text">文本</a>
+        <a href="#image">图片</a>
+        <a href="#link">链接</a>
+        <a href="#teshu">特殊字符</a>
+        <a href="#biaoq">列表</a>
+        <a href="#biaoge">表格</a>
+        <a href="#biaodan">表单</a>
+        <a href="#xialk">下拉框</a>
+    </div>
+    <hr />
+    <div id="text">
+        <h2>文本</h2>
+        <strong tabindex="2">马云</strong>
+        <em tabindex="1">刘强东</em>
+        <del tabindex="4">李彦宏</del>
+        <ins tabindex="3">马化腾</ins>
+    </div>
+    <div id="image">
+        <h2>图片</h2>
+        <img src="xx.jpg" alt="图片" title="xx" width="100px" />
+    </div>
+    <div id="link">
+        <h2>链接</h2>
+        <a href="http://wwww.baidu.com">百度</a>
+        <a href="https://cn.bing.com/">必应</a>
+        <!-- <a href="http://wwww.baidu.com" target="_self">百度</a>
+        <a href="https://cn.bing.com/" target="_blank">必应</a> -->
+    </div>
+    <div id="biaoq">
+        <h2>列表</h2>
+        <ul>
+            <li>香蕉</li>
+            <li>苹果</li>
+            <li>梨子</li>
+        </ul>
+
+        <ol>
+            <li>美国</li>
+            <li>中国</li>
+            <li>俄罗斯</li>
+        </ol>
+
+        <dl>
+            <dt>北京</dt>
+            <dd>昌平</dd>
+            <dd>通州</dd>
+            <dd>顺义</dd>
+        </dl>
+    </div>
+    <div id="biaoge">
+        <h2>表格</h2>
+        <table cellspacing="10" cellpadding="10" border="1">
+            <caption>个人信息</caption>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tom</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Tom</td>
+                    <!-- <td>男</td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="biaodan">
+        <h2>表单</h2>
+        <form action="" method="GET">
+            <input type="text" maxlength="6" name="name"/>
+            <input type="password" name="pwd"/>
+            <input type="radio" name="sex" checked value="man"/>男 <input type="radio" name="sex" value="woman"/>女
+            <input type="checkbox" name="live" />篮球 <input type="checkbox" name="live" />足球
+            <input type="button" value="search" />
+            <input type="submit" />
+            <input type="reset" />
+            <input type="image" />
+            <input type="file" />
+        </form>
+    </div>
+    <div id="xialk">
+        <h2>下拉框</h2>
+        <select>
+            <option value="one">1</option>
+            <option value="two" selected>2</option>
+            <option value="three">3</option>
+        </select>
+    </div>
+
+
+    <div id="teshu">
+        <h2>特殊字符</h2>
+        <P>&nbsp;</P>
+        <P>&lt;</P>
+        <P>&gt;</P>
+        <P>&amp;</P>
+        <P>&yen;</P>
+        <P>&copy;</P>
+        <P>&reg;</P>
+        <P>&deg;</P>
+        <P>&plusmn;</P>
+        <P>&times;</P>
+        <P>&divide;</P>
+        <P>&sup2;</P>
+        <P>&sup3;</P>
+    </div>
+</body>
+
+</html>

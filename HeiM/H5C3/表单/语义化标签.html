@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="myForm">
+        <!-- autofocus 自动获取焦点 -->
+        <!-- autocomplete：智能提示 on:打开 off:关闭
+        前提:
+        1、必须成功提交过：提交后才会有记录
+        2、添加autocomplete元素必须有Name属性 -->
+        <!-- required：必须输入 -->
+        <!-- pattern:正则表达式验证 -->
+        用户名: <input type="text" name="username" id="" placeholder="请输入用户名" autofocus autocomplete="on" required><br />
+        密码: <input type="password" name="userPwd" id=""><br />
+        邮箱: <input type="email"><br />
+        电话: <input type="tel" pattern="^(\+86)?1\d{10}$"><br />
+        网址: <input type="url"><br />
+        数量: <input type="number" value="50" max="100" min="0"><br />
+        商品名称: <input type="search"><br />
+        范围: <input type="range" max="100" min="0" value="50"><br />
+        颜色: <input type="color"><br />
+        时间: <input type="time">
+        日期: <input type="date">
+        日期时间: <input type="datetime-local"> 
+        月份： <input type="month"> 
+        星期: <input type="week"> <br />
+        <!-- multiple允许选择多个文件 -->
+        文件： <input type="file" name="filename" multiple><br />
+        <!-- multiple在邮箱中允许输入多个邮箱 用','隔开 -->
+        邮箱: <input type="email" multiple><br />
+        <input type="submit" value="提交">
+    </form>
+    <!-- 没有包含在Form中 数据无法提交 -->
+    <!-- form：指定表单id 指定表单提交 该数据也会提交 -->
+    地址:<input type="text" name="address" form="myForm">
+</body>
+
+</html>

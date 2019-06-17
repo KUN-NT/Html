@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+    var x=document.getElementById("demo");
+    function getLocation(){
+        if(navigator.geolocation){
+            //{} 可以设置获取数据的方式
+            //enableHighAccuacy:true/false 是否使用高精度
+            //timeout:设置超时事件 单位ms
+            //maximumAge:可以设置浏览器重新获取地理位置的时间间隔
+            navigator.geolocation.getCurrentPosition(showPosition,showError,{});
+        }
+        else{
+            x.innerHTML="浏览器未开启地理位置访问";
+        }
+    }
+    function showPosition(position){
+        /*
+            latitude 纬度
+            longitude 经度
+            accuracy 精度
+            altitude 海拔高度
+        */
+        x.innerHTML="Laittude:"+position.coords.latitude+
+                    "<br/>"+"Longitude:"+position.coords.longitude;
+    }
+    function showError(error){
+        switch(error.code){
+            case error.PERMISSION_DENIED:
+                x.innerHTML="用户拒绝定位请求";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML="定位信息不可用";
+                break;
+            case error.TIMEOUT:
+                x.innerHTML="请求超时";
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML="位置错误";
+                break;
+            default:
+                x.innerHTML="获取地理位置失败";
+        }
+    }
+    getLocation();
+    </script>
+</body>
+</html>

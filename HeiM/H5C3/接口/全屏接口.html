@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <img src="../多媒体/doc/dy.jpg" alt="">
+        <input type="button" id="full" value="全屏">
+        <input type="button" id="cancelfull" value="退出全屏">
+        <input type="button" id="isfull" value="是否全屏">
+    </div>
+    <script>
+        window.onload = function () {
+            var div = document.querySelector("div");
+            //开启全屏
+            //chrome:webkit  firefox:moz  ie:ms
+            document.querySelector("#full").onclick = function () {
+                if (div.requestFullscreen) {
+                    div.requestFullscreen();
+                }
+                if (div.webkitRequestFullScreen) {
+                    div.webkitRequestFullScreen();
+                }
+                if (div.mozRequestFullscreen) {
+                    div.mozRequestFullscreen();
+                }
+                if (div.msRequestFullscreen) {
+                    div.msRequestFullscreen();
+                }
+            }
+            //退出全屏
+            //只能使用document实现
+            document.querySelector("#cancelfull").onclick = function () {
+                if (document.cancelFullscreen) {
+                    document.cancelFullscreen();
+                }
+                if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                }
+                if (document.mozCancelFullscreen) {
+                    document.mozCancelFullscreen();
+                }
+                if (document.msCancelFullscreen) {
+                    document.msCancelFullscreen();
+                }
+            }
+
+            //判断是否全屏
+            //使用document判断 
+            document.querySelector("#isfull").onclick = function () {
+                if(document.fullscreenElement||document.webkitfullscreenElement||document.mozfullscreenElement){
+                    alert(true);
+                }
+                else{
+                    alert(false);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

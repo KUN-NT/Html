@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <!-- 原来的只能做选择 不能输入
+        <select name="" id="">
+            <option value="1">java</option>
+            <option value="2">python</option>
+            <option value="3">php</option>
+        </select> -->
+
+        <!-- 兼容性不好 -->
+        <!-- 通过list属性与datalist关联 -->
+        <input type="text" list="subjects">
+        <datalist id="subjects">
+            <option value="java" label="多"></option>
+            <option value="c#" label="有后台"></option>
+            <option value="python" label="易"></option>
+        </datalist>
+
+        <input type="text" list="subjects">
+        <datalist id="subjects">
+            <!-- input 类型为url value必须添加http:// 否则无法显示选项 -->
+            <option value="java" label="多"></option>
+            <option value="c#" label="有后台"></option>
+            <option value="python" label="易"></option>
+        </datalist>
+
+    </form>
+</body>
+</html>

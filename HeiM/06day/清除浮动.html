@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father{
+            border:1px solid red;
+            width:200px;
+            /* 方法2 */
+            overflow: hidden;
+        }
+        .big{
+            height: 200px;
+            width: 100px;
+            background-color: pink;
+            float:left;
+        }
+        .small{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            float:left;
+        }
+        .footer{
+            height: 100px;
+            width: 200px;
+            background-color: black;
+        }
+        /* 方法1 */
+        /* .clear{
+            clear:both;
+        } */
+
+        /* 方法3 */
+        /* .clearfix:after{ */
+            /* clearfix名称随意 */
+            /* content:"";
+            display: block;
+            height: 0;
+            clear:both;
+            visibility: hidden;
+        } */
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="big"></div>
+        <div class="small"></div>
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

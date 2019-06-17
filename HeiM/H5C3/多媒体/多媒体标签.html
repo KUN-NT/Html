@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- audio：音频 -->
+    <!-- controls：控制面板
+    autoplay：自动播放
+    loop：循环 -->
+    <audio src="./doc/可桜-达尔文.mp3" autoplay controls></audio>
+
+    <!-- video：视频 -->
+    <video src="./doc/tvc.mp4" poster="./doc/dy.jpg" controls width="100%"></video>
+    <!-- 不同浏览器支持的视频格式不一致,用source设置多个视频文件 -->
+    <video>
+        <source src='./doc/tvc.mp4' type="video/mp4">
+        <!-- <source src='./doc/tvc.flv' type="video/flv"> -->
+    </video>
+</body>
+
+</html>

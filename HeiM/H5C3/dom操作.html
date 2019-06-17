@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .red{
+        color:red;
+    }
+    .green{
+        color:green;
+    }
+    .blue{
+        color:blue;
+    }
+    .underline{
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="j">java</li>
+        <li id="c" class="blue">c#</li>
+        <li id="p">python</li>
+        <li id="ph">php</li>
+    </ul>
+    <input type="button" value="添加" id="add">
+    <input type="button" value="移除" id="remove">
+    <input type="button" value="切换" id="toggle">
+    <input type="button" value="检查" id="contains">
+    <script>
+        var python=document.querySelector('#p');
+        console.log(python);
+
+        var all=document.querySelectorAll('li');
+        console.log(all);
+
+        window.onload=function(){
+            //添加样式
+            document.querySelector("#add").onclick=function(){
+                document.querySelector("li").classList.add("red");
+                document.querySelector("li").classList.add("underline");
+            }
+            //移除样式
+            document.querySelector("#remove").onclick=function(){
+                if(document.querySelectorAll("li")[1].classList.contains("blue")){
+                    document.querySelector(".blue").classList.remove("blue");
+                }
+            }
+            //切换样式，有就移除 没有添加
+            document.querySelector("#toggle").onclick=function(){
+                document.querySelectorAll("li")[2].classList.toggle("green");
+            }
+            //检查是否有改样式
+            document.querySelector("#contains").onclick=function(){
+                var res=document.querySelectorAll("li")[3].classList.contains("red");
+                console.log(res);
+            }
+        }
+    </script>
+</body>
+</html>

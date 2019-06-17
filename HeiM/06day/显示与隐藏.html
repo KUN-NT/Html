@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .up{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* display: none; 隐藏元素不占有位置 display:block显示元素 */
+            visibility: hidden; /*保留原来位置 visilble显示元素*/
+        }
+        .down{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .text{
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            overflow: hidden;/*隐藏溢出部分*/
+        }
+        .test{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="up"></div>
+    <div class="down"></div>
+    <div class="text">
+        文字文字文字文字文字文字文字文字文字
+        文字文字文字文字文字文字文字文字文字
+        文字文字文字文字文字文字文字文字文字
+    </div>
+    <div class="test"></div>
+</body>
+</html>
