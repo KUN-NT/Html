@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu {
+            width: 200px;
+            height: auto;
+            margin: 100px auto;
+        }
+
+        .item>h3 {
+            height: 40px;
+            line-height: 40px;
+            background-color: #7dffe7;
+            color: orange;
+            border-bottom: 1px solid #ccc;
+            padding-left: 10px;
+        }
+
+        .item>.itemBox {
+            width: 100%;
+            height: auto;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s linear 0s;
+            /* 过渡效果只能产生从某个值到另一个具体值的过渡 */
+            /* display: none;
+            transition: display 1s linear 0s; */
+        }
+
+        .item>.itemBox>ul {
+            list-style: none;
+            background-color: #eaffb6;
+            padding: 10px;
+        }
+
+        /* .item:active>.itemBox { */
+            /* display: block; */
+            /* height: 110px; */
+        /* } */
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="item" onclick="add();">
+            <h3>市内新闻</h3>
+            <div class="itemBox" id="item">
+                <ul>
+                    <li>深圳超市肉菜档遭抢</li>
+                    <li>深圳超市肉菜档遭抢</li>
+                    <li>深圳超市肉菜档遭抢</li>
+                    <li>深圳超市肉菜档遭抢</li>
+                </ul>
+            </div>
+        </div>
+        <div class="item" onclick="add1();" >
+            <h3>市内新闻</h3>
+            <div class="itemBox" id="item1">
+                <ul>
+                    <li>深圳超市肉菜档遭抢</li>
+                    <li>深圳超市肉菜档遭抢</li>
+                    <li>深圳超市肉菜档遭抢</li>
+                    <li>深圳超市肉菜档遭抢</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function add() {
+            var con = document.getElementById('item');
+            var height = parseInt(con.style.height || con.clientHeight || con.offsetHeight || con.scrollHeight);
+            console.log(height);
+                if (height<100){
+                    con.style.height = '100px';
+                }else {
+                    con.style.height = '0px';
+                }
+        }
+        function add1() {
+            var con = document.getElementById('item1');
+            var height = parseInt(con.style.height || con.clientHeight || con.offsetHeight || con.scrollHeight);
+            console.log(height);
+                if (height<100){
+                    con.style.height = '100px';
+                }else {
+                    con.style.height = '0px';
+                }
+        }
+    </script>
+</body>
+
+</html>
