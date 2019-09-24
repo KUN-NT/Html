@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+
+            /* 不在此设置画布尺寸，会拉伸画布，导致图像变形 */
+            /* height: 400px;
+            width: 600px; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建画布 默认300*150-->
+    <canvas height="400" width="600">
+
+    </canvas>
+    <!-- 画笔 -->
+    <script>
+        // 获取画布
+        var item=document.querySelector('canvas');
+        // 获取上下文（绘画工具箱）
+        var ctx=item.getContext('2d');
+        // 移动画笔
+        ctx.moveTo(100,100.5);
+        // 绘制路径
+        ctx.lineTo(200,100.5);
+
+        ctx.moveTo(100,200);
+        ctx.lineTo(200,200);
+
+        ctx.moveTo(100,300);
+        ctx.lineTo(200,300);
+        // 描边
+        ctx.stroke();
+
+        // 关于线条的问题
+        // 默认宽度是多少 1px
+        // 默认颜色是什么 黑
+        // 产生的原因
+        // 1、线条是在刻度线上绘制的，上下各占0.5px，浏览器解析不了，显示2px效果，颜色就淡了变成灰色
+        // 解决方法
+        // 挪0.5px
+    </script>
+</body>
+</html>
