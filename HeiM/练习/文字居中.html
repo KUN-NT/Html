@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../dll/js/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        #content-sec3 {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            background-size: 100% auto;
+            text-align: center;
+        }
+
+        #content-sec3 .title {
+            margin-top: 5px;
+            font-family: 微软雅黑;
+            font-size: 20px;
+            color: #333333;
+        }
+
+        #content-sec3 .title-sub-line {
+            margin-top: 15px;
+            margin-bottom: 18px;
+            font-family: 微软雅黑;
+            font-size: 12px;
+            color: #CCCCCC;
+            text-align: center;
+        }
+
+        #content-sec3 .title-more {
+            margin-bottom: 10px;
+            font-family: 微软雅黑;
+            font-size: 12px;
+            color: #2E84E9;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content-sec3">
+        <img class="img-responsive" src="../案例/京东/images/ipad.jpg" />
+        <div id="content-sec3-adjust" style="position: absolute; top: 0; left: 50%;">
+            <h2 class="title">Vpanel配件 </h2>
+            <p class="title-sub-line hidden-sm hidden-xs"> Vpanel ACCESSORIES </p>
+            <p class="title-more">查看更多 <img src="../案例/京东/images/ipad.jpg" /> </p>
+        </div>
+    </div>
+    <script>
+        $(window).resize(function () {
+            init();
+        });
+        var init = function () {
+            var _bg3width = $("#content-sec3-adjust").width();
+            $("#content-sec3-adjust").css("margin-left", _bg3width * -1 / 2 + "px");
+        };
+    </script>
+</body>
+
+</html>
